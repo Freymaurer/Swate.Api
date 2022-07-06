@@ -1,12 +1,15 @@
 ﻿module ProjectInfo
 
 open Fake.Core
+open Fake.Extensions.Release
+
+Release.exists()
 
 let project = "Swate.Api"
 
 let testProjects = 
     [
-        @"..\tests\Swate.Api.Tests\Swate.Api.Tests.fsproj"
+        @"tests\Swate.Api.Tests\Swate.Api.Tests.fsproj"
         // add relative paths (from project root) to your testprojects here
     ]
 

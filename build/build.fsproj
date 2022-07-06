@@ -9,6 +9,7 @@
     <Compile Include="Helpers.fs" />
     <Compile Include="MessagePrompts.fs" />
     <Compile Include="ProjectInfo.fs" />
+    <Compile Include="ReleaseNoteTasks.fs" />
     <Compile Include="BasicTasks.fs" />
     <Compile Include="TestTasks.fs" />
     <Compile Include="PackageTasks.fs" />
@@ -27,6 +28,7 @@
     <PackageReference Include="Fake.DotNet.MSBuild" Version="5.22.0" />
     <PackageReference Include="Fake.IO.FileSystem" Version="5.22.0" />
     <PackageReference Include="Fake.Tools.Git" Version="5.22.0" />
+	<PackageReference Include="Fake.Extensions.Release" Version="0.2.0" />
   </ItemGroup>
 
 </Project>

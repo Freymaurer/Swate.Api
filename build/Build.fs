@@ -16,6 +16,11 @@ open TestTasks
 open PackageTasks
 open DocumentationTasks
 open ReleaseTasks
+open ReleaseNotesTasks
+
+/// Referenced here to make ReleaseNotesTasks accessible.
+let _ = updateReleaseNotes
+
 
 /// Full release of nuget package, git tag, and documentation for the stable version.
 let _release = 
