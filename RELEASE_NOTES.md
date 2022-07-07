@@ -1,3 +1,7 @@
+### 0.2.0+29cecf6 (Released 2022-7-7)
+* Additions:
+    * latest commit #29cecf6
+
 ### 0.1.0+c7eee2e (Released 2022-7-7)
 * Additions:
     * latest commit #c7eee2e

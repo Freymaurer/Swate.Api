@@ -10,6 +10,13 @@ open BlackFox.Fake
 open Fake.Core
 open Fake.IO.Globbing.Operators
 
+open System.Text.RegularExpressions
+
+[<Literal>]
+let commitLinkPattern = @"\[\[#[a-z0-9]*\]\(.*\)\] "
+
+let replaceCommitLink input= Regex.Replace(input,commitLinkPattern,"")
+
 let pack = BuildTask.create "Pack" [clean; build; runTests] {
     if promptYesNo (sprintf "creating stable package with version %s OK?" stableVersionTag ) 
         then
@@ -20,7 +27,7 @@ let pack = BuildTask.create "Pack" [clean; build; runTests] {
                     {p.MSBuildParams with 
                         Properties = ([
                             "Version",stableVersionTag
-                            "PackageReleaseNotes",  (release.Notes |> String.concat "\r\n")
+                            "PackageReleaseNotes",  (release.Notes |> String.concat "\r\n" |> replaceCommitLink)
                         ] @ p.MSBuildParams.Properties)
                     }
                 {
