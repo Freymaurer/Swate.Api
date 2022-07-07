@@ -1,5 +1,16 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
+	<PropertyGroup>
+		<Authors>Kevin Frey, nfdi4plants</Authors>
+		<Description>Dotnet library for easy access to Swate API.</Description>
+		<Summary>Dotnet library for easy access to Swate API.</Summary>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<PackageProjectUrl>https://github.com/Freymaurer/Swate.Api</PackageProjectUrl>
+		<PackageTags>fsharp csharp dotnet api dataplant nfdi4plants</PackageTags>
+		<RepositoryUrl>https://github.com/Freymaurer/Swate.Api</RepositoryUrl>
+		<RepositoryType>git</RepositoryType>
+	</PropertyGroup>
+	
     <PropertyGroup>
         <TargetFramework>net6.0</TargetFramework>
         <GenerateDocumentationFile>true</GenerateDocumentationFile>
